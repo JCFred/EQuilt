@@ -1,0 +1,44 @@
+body{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.grid{
+  /*border:1px solid black;*/
+  height: 4px;
+  width: 4px;
+}
+.split{
+  width:320px;
+  height:320px;
+  display:flex;
+  flex-wrap:wrap;
+}
+.patch{
+  display:flex;
+  flex-wrap:wrap;
+  height:64px;
+  width:64px;
+  box-sizing: border-box;
+  color:transparent;
+}
+.patch:hover{
+  opacity: .5;
+  color:blue;
+  /*border:1px solid red;*/
+}
+.divPos{
+  position: absolute;
+}
+
+
+#container{
+  border:1px solid black;
+  display:flex;
+  flex-wrap:wrap;
+  height: 640px;
+  width:960px;
+  min-width:960px;
+
+}

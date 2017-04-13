@@ -1,0 +1,32 @@
+main{
+  display:flex;
+  justify-content: center;
+}
+
+.pixel{
+  height:16px;
+  width:16px;
+}
+.paint{
+  height:32px;
+  width:32px;
+}
+#colorPick{
+  border:1px solid black;
+  height:48px;
+  width:48px;
+  margin:16px;
+}
+#canvas{
+  border:1px solid black;
+  height:256px;
+  width:256px;
+  display:flex;
+  flex-wrap:wrap;
+}
+#palette{
+  border:1px solid black;
+  height:224px;
+  width:32px;
+  margin:16px;
+}

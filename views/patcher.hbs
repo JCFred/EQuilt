@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Patch maker</title>
+    <link rel="stylesheet" href="patcher.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Patch Stitcher</h1>
+      <h2 id="patchPos"></h2>
+    </header>
+    <main>
+      <div style="margin:16px;">
+        <label>selected color</label>
+        <!-- <div id="colorPick"></div> -->
+        <form>
+          <fieldset>
+            <p>
+              <label>Pencile</label>
+              <input name="tool" type="radio" checked/>
+            </p>
+            <p>
+              <label>Pen</label>
+              <input name="tool" type="radio"/>
+            </p>
+            <p>
+              <label>Bucket</label>
+              <input name="tool" type="radio"/>
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div id="canvas"></div>
+      <div id="palette"></div>
+    </main>
+  <script src="/patcher.js"></script>
+  </body>
+</html>

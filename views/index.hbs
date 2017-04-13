@@ -2,27 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>E Quilt</title>
     <link rel="stylesheet" href="style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   </head>
   <body>
-    <div id="container">
-      {{#each data.picture}}
-        {{#each this}}
-        <div class="patch">
-          <p class="divPos">{{this.[pos]}}</p>
-          {{#each this.[patch]}}
-              {{#each this}}
-                  <div style="background-color:{{this}};" class="grid"></div>
-              {{/each}}
+    <header>
+      <h1>G46 E-Quilt</h1>
+    </header>
+    <main>
+      <div id="container">
+        {{#each data.picture}}
+          {{#each this}}
+          <div class="patch">
+            <p class="divPos">{{this.[pos]}}</p>
+            {{#each this.[patch]}}
+                {{#each this}}
+                    <div style="background-color:{{this}};" class="grid"></div>
+                {{/each}}
+            {{/each}}
+          </div>
           {{/each}}
-        </div>
         {{/each}}
-      {{/each}}
-    </div>
-  <!-- <script>var data = {{data}}</script> -->
-  <script src="/main.js"></script>
+      </div>
+      <form method="post">
+        <fieldset>
+          <legend>Stich your own patch:</legend>
+          <label>User Code</label>
+          <input type="interger" id="userCode"required/>
+          <label>Patch X:</label>
+          <input type="interger" id="userX" required/>
+          <label>Patch Y:</label>
+          <input type="interger" id="userY" required/>
+          <input type="button"  value="Stich a patch" id="patchButton"></input>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
 
+    </footer>
+  <script src="/main.js"></script>
   </body>
 </html>

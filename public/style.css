@@ -1,4 +1,4 @@
-body{
+main{
   display:flex;
   justify-content: center;
   flex-wrap:wrap;
@@ -30,6 +30,7 @@ body{
 }
 .divPos{
   position: absolute;
+
 }
 
 
@@ -38,6 +39,7 @@ body{
   display:flex;
   flex-wrap:wrap;
   height: 640px;
+  min-height: 640px;
   width:960px;
   min-width:960px;
 

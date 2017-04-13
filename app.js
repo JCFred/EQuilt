@@ -1,17 +1,19 @@
 
 var express = require('express')
 var app = express()
+const bodyParser = require('body-parser')
 
 const R = '#c21b1b'
 const W = '#ffffff'
-const Gr = '#9c9c9c'
+const GR = '#9c9c9c'
 const B = '#1b69df'
 const Y = '#f0ee4d'
 const G = '#40bd2b'
 
 var data = require('./quilt')
-console.log(data);
+//console.log(data);
 app.set('view engine', 'hbs')
+app.use(bodyParser.urlencoded({extended:true}))
 
 app.use(express.static('public'))
 
@@ -19,8 +21,16 @@ app.get('/', (req, res) => {
   res.render('index', {data})
 })
 
+app.get('/patcher', function(req, res){
+  res.render('patcher', {data})
+})
+
 app.get('/data', function(req, res){
   res.json(data)
+})
+
+app.post('/index', (req, res) => {
+
 })
 
 var boxSize = 4
